@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 96" width="264" height="96" fill="none" role="img" aria-label="Rent Me and My Truck">
+  <g fill="currentColor" fill-rule="evenodd">
+
+    <!-- LOAD — crate, brush, lumber spilling over the rail -->
+    <path d="M18 36V24l16-4v6c2-11 16-14 22-3l6-1v-8h20v13l10-1c2-9 14-9 16 1l14-1v10H18z"/>
+
+    <!-- DUMP TRAILER — wood top rail over steel box, seam between -->
+    <path d="M14 34h112v13H14z"/>
+    <path d="M14 50h112v18H14z"/>
+    <!-- frame rail + tongue -->
+    <path d="M12 70h116v6H12z"/>
+    <path d="M124 66h14v5h-14z"/>
+
+    <!-- PICKUP, facing right — bed, crew cab, hood (window knocked out) -->
+    <path d="M136 74V46h40l10-24h30l12 22h24l2 30H136zm54-46h20l7.5 16H190V28z"/>
+
+    <!-- WHEELS -->
+    <path d="M46 62a13 13 0 1 1 0 26 13 13 0 0 1 0-26zm0 7.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+    <path d="M84 62a13 13 0 1 1 0 26 13 13 0 0 1 0-26zm0 7.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+    <path d="M162 60a14 14 0 1 1 0 28 14 14 0 0 1 0-28zm0 8a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/>
+    <path d="M228 60a14 14 0 1 1 0 28 14 14 0 0 1 0-28zm0 8a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/>
+
+  </g>
+</svg>

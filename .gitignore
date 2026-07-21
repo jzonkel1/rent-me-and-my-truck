@@ -1,0 +1,6 @@
+# source photos stay local — only the site ships
+*.jpg
+*.webp
+!img/*.jpg
+research-notes.md
+brand/logo-wordmark-full.png

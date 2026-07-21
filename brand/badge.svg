@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Rent Me and My Truck">
+  <rect width="128" height="128" rx="28" fill="#2E2C29"/>
+  <g fill="#CCB19D" fill-rule="evenodd">
+    <!-- loaded bed -->
+    <path d="M22 46 30 34l8 9 9-12 9 11V70H22V46z"/>
+    <!-- pickup, facing right -->
+    <path d="M22 84V62h30l8-18h22l9 17h17l2 23H22zm40-34h14l5.5 12H62V50z"/>
+    <!-- wheels -->
+    <path d="M44 76a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 6.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/>
+    <path d="M92 76a11 11 0 1 1 0 22 11 11 0 0 1 0-22zm0 6.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/>
+  </g>
+</svg>
