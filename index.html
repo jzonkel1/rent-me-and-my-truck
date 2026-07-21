@@ -197,33 +197,6 @@ nav a:hover{color:var(--gold-hi)}
 /* small Google glyph on each review card */
 .rev .who .gmark{width:15px;height:15px;vertical-align:-2px;margin-right:5px}
 
-/* ---------- rental ---------- */
-.rental{position:relative;overflow:hidden;border:1px solid var(--line);
-  border-radius:18px;padding:44px;display:grid;gap:34px;align-items:center;isolation:isolate}
-.rental-bg{position:absolute;inset:0;z-index:-1}
-.rental-bg img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
-.rental-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(14,13,12,.95) 0%,rgba(14,13,12,.88) 46%,rgba(14,13,12,.62) 100%)}
-@media(max-width:899px){.rental-bg::after{background:linear-gradient(180deg,rgba(14,13,12,.86) 0%,rgba(14,13,12,.93) 100%)}}
-@media(min-width:900px){.rental{grid-template-columns:1.05fr .95fr;padding:56px}}
-.rental h2{font-size:clamp(1.8rem,4vw,2.6rem)}
-.rental .price{font-family:Anton,sans-serif;font-size:clamp(3.4rem,9vw,5.4rem);color:var(--gold);
-  line-height:.9;text-shadow:0 3px 26px rgba(0,0,0,.5)}
-.rental .price span{font-size:.32em;color:var(--text);letter-spacing:.04em}
-/* bigger, louder rental CTA */
-.rental .btn-xl{padding:22px 40px;font-size:19px;border-radius:11px;
-  box-shadow:0 16px 40px rgba(194,160,106,.28)}
-.rental .btn-xl svg{width:22px;height:22px}
-.rental .cta-note{margin:16px 0 0;font-size:14px;color:var(--muted);letter-spacing:.04em}
-.rental .cta-box{background:rgba(12,11,10,.55);border:1px solid var(--line);
-  border-radius:16px;padding:32px 28px;text-align:center;backdrop-filter:blur(3px)}
-.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 0;
-  list-style:none;padding:0}
-.specs li{background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.specs b{display:block;font-family:Anton,sans-serif;font-size:1.24rem;color:var(--gold-hi);
-  letter-spacing:.02em}
-.specs span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-weight:600}
-
 /* ---------- area ---------- */
 .area{display:grid;gap:44px;align-items:center}
 @media(min-width:920px){.area{grid-template-columns:.85fr 1.15fr}}
@@ -558,38 +531,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
   </div>
 </section>
 
-<!-- ============ TRAILER RENTAL ============ -->
-<section>
-  <div class="wrap">
-    <div class="rental">
-      <div class="rental-bg">
-        <img src="img/trailer-rental.jpg" alt="The 22ft car hauling trailer available to rent" loading="lazy">
-      </div>
-      <div>
-        <p class="eyebrow left">Rather do it yourself?</p>
-        <h2>Rent our 22ft car hauling trailer</h2>
-        <p style="color:var(--muted);margin:18px 0 0">
-          Heavy-duty, drive-over fenders, straps included. Perfect for car hauling,
-          equipment, ATV/UTVs and local moves.</p>
-        <ul class="specs">
-          <li><b>22 FT</b><span>Deck length</span></li>
-          <li><b>14,000 LB</b><span>GVWR</span></li>
-          <li><b>DUAL 7K</b><span>Axles</span></li>
-          <li><b>INCLUDED</b><span>Straps</span></li>
-        </ul>
-      </div>
-      <div class="cta-box">
-        <div class="price">$80<span>/day</span></div>
-        <p style="color:var(--muted);margin:12px 0 26px;font-weight:600">Straps included · Call or text to reserve</p>
-        <a class="btn btn-gold btn-xl" href="tel:+13615584086">
-          <svg viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-          361-558-4086
-        </a>
-        <p class="cta-note">Reserve it for the weekend before someone else does.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ============ SERVICE AREA ============ -->
 <section id="area">
@@ -671,7 +613,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
           <option>Junk removal</option><option>Furniture or appliance removal</option>
           <option>Brush, yard debris or tree limbs</option><option>Full cleanout (home, apartment, estate)</option>
           <option>Storage unit</option><option>Construction debris</option>
-          <option>Delivery or moving help</option><option>Trailer rental</option>
+          <option>Delivery or moving help</option>
           <option>Something else</option>
         </select>
         <p class="err">Pick the closest one — we'll sort out the details.</p></div>
@@ -719,7 +661,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
           <li><a href="#services">Brush &amp; debris haul-off</a></li>
           <li><a href="#services">Home &amp; estate cleanouts</a></li>
           <li><a href="#services">Delivery &amp; moving help</a></li>
-          <li><a href="#">22ft trailer rental</a></li>
         </ul>
       </div>
       <div>
