@@ -28,12 +28,17 @@ h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppe
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
 .eyebrow{font-weight:700;font-size:clamp(10.5px,2.7vw,12.5px);
   letter-spacing:clamp(.11em,.55vw,.26em);text-transform:uppercase;color:var(--gold);margin:0 0 18px}
-/* centred eyebrows keep a dash on BOTH sides; only left-aligned ones drop the trailing dash */
-.eyebrow::before,.eyebrow::after{content:"—";opacity:.5;margin:0 .7em}
+/* western kickers: stars instead of dashes (from his flyer's ★ AND MY TRUCK ★ motif);
+   centred ones get a star BOTH sides, left-aligned ones keep just the leading star */
+.eyebrow::before,.eyebrow::after{content:"★";opacity:.55;margin:0 .7em;font-size:.9em}
 @media(min-width:900px){
   .eyebrow.left::after{content:none}
   .eyebrow.left::before{margin-left:0}
 }
+.eyebrow .es{opacity:.55;margin:0 .45em;font-size:.9em}
+/* poster ornament under centred section titles: line — star — line */
+.head h2::after{content:"";display:block;width:150px;height:11px;margin:20px auto 0;
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 12"><path stroke="%23C2A06A" stroke-width="1.4" opacity=".75" d="M0 6h56M94 6h56"/><path fill="%23C2A06A" d="M75 .5l2 4 4.4.6-3.2 3.1.8 4.3-4-2.1-4 2.1.8-4.3-3.2-3.1 4.4-.6z"/></svg>') center/contain no-repeat}
 section{padding:86px 0}
 @media(max-width:700px){section{padding:60px 0}}
 
@@ -88,10 +93,15 @@ nav a:hover{color:var(--gold-hi)}
 .chip b{color:var(--gold-hi);font-weight:700}
 .stars{color:var(--gold);letter-spacing:1px}
 
-/* ---------- slogan band ---------- */
-.band{background:var(--gold);color:#17140F;padding:26px 0}
+/* ---------- slogan band — western banner strip ---------- */
+.band{background:var(--gold);color:#17140F;padding:26px 0;
+  box-shadow:inset 0 4px 0 rgba(23,20,15,.22),inset 0 -4px 0 rgba(23,20,15,.22),
+             inset 0 7px 0 var(--gold),inset 0 -7px 0 var(--gold),
+             inset 0 8px 0 rgba(23,20,15,.22),inset 0 -8px 0 rgba(23,20,15,.22)}
 .band p{margin:0;text-align:center;font-family:Anton,sans-serif;text-transform:uppercase;
   font-size:clamp(1.05rem,3vw,1.7rem);letter-spacing:.02em}
+.band p::before{content:"★";margin-right:.9em;opacity:.55;font-size:.8em;vertical-align:8%}
+.band p::after{content:"★";margin-left:.9em;opacity:.55;font-size:.8em;vertical-align:8%}
 
 /* ---------- generic section head ---------- */
 .head{max-width:720px;margin:0 auto 52px;text-align:center}
@@ -139,6 +149,9 @@ nav a:hover{color:var(--gold-hi)}
   border-radius:var(--r);overflow:hidden;transition:border-color .18s,transform .18s;
   display:flex;flex-direction:column}
 .card:hover{border-color:var(--gold);transform:translateY(-3px)}
+/* western ticket frame: inner gold hairline over the whole card */
+.card::after{content:"";position:absolute;inset:7px;border:1px solid rgba(194,160,106,.24);
+  border-radius:9px;pointer-events:none;z-index:3}
 /* photo backdrop: real job shot behind the card head */
 .card .ph{position:relative;height:186px;overflow:hidden}
 .card .ph img{width:100%;height:100%;object-fit:cover;object-position:center 52%;transition:transform .6s}
@@ -249,8 +262,11 @@ form .btn[aria-busy="true"]{opacity:.72;pointer-events:none}
 footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink)}
 .ft{display:grid;gap:34px}
 @media(min-width:820px){.ft{grid-template-columns:1.4fr 1fr 1fr}}
-.ft img{height:52px;width:auto;margin-bottom:18px}
+.ft img{height:52px;width:auto;margin-bottom:14px}
 .ft p{color:var(--muted);font-size:15px;margin:0}
+.ft .ft-tag{font-weight:700;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);margin:0 0 12px}
+.ft .ft-tag span{opacity:.55;margin:0 .5em;font-size:.9em}
 .ft h4{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:1.05rem;
   letter-spacing:.06em;margin:0 0 16px;color:var(--white)}
 .ft ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
@@ -307,9 +323,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
   </div>
   <div class="wrap">
     <div class="hero-in">
-      <p class="eyebrow">Serving Corpus Christi &amp; Surrounding Areas</p>
+      <p class="eyebrow">Hauling<span class="es">★</span>Delivery<span class="es">★</span>Removal</p>
       <h1>We get our hands dirty<br>so <em>you can keep yours clean.</em></h1>
-      <p class="lead">Junk removal, hauling, delivery and full cleanouts — from a single couch
+      <p class="lead">Serving Corpus Christi &amp; the surrounding Coastal Bend — from a single couch
         to an entire property. Open 7 days a week including evenings.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="tel:+13613320123">
@@ -642,6 +658,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
     <div class="ft">
       <div>
         <img src="brand/logo-wordmark.png" alt="Rent Me and My Truck LLC">
+        <p class="ft-tag">Hauling<span>★</span>Delivery<span>★</span>Removal</p>
         <p>Corpus Christi's hauling, removal and delivery crew.
            We get our hands dirty so you can keep yours clean.</p>
         <div class="socials">
