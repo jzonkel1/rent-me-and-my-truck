@@ -18,7 +18,7 @@ html{scroll-behavior:smooth;scroll-padding-top:86px}
 html,body{overflow-x:clip;max-width:100%}
 body{margin:0;background:var(--ink);color:var(--text);
   font:400 17px/1.65 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:'Alfa Slab One',Rockwell,Georgia,serif;font-weight:400;text-transform:uppercase;
   letter-spacing:.012em;line-height:1.03;margin:0}
