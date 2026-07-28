@@ -1,6 +1,14 @@
 # source photos stay local — only the site ships
 *.jpg
+*.jpeg
 *.webp
+*.zip
 !img/*.jpg
 research-notes.md
 brand/logo-wordmark-full.png
+brand/_artboard.html
+PHOTO-LIBRARY.md
+SEO-AUDIT.md
+# internal working files — never ship client PII
+Fillout Rent Me and My Truck Website Onboarding results.csv
+onboarding-form-prompt.md

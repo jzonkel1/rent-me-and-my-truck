@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jzonkel1.github.io/rent-me-and-my-truck/sitemap.xml
