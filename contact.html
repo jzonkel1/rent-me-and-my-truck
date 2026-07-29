@@ -81,11 +81,8 @@
     </div>
 
     <!-- DEMO: routes to Zonkel Media until Eddie's email is confirmed at close -->
-    <form class="qwiz" id="estimate" action="https://formsubmit.co/rentmeandmytruck@yahoo.com" method="POST">
-      <input type="hidden" name="_subject" value="New estimate request — Rent Me and My Truck DEMO">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://rentmeandmytruck.com/thanks.html">
+    <form class="qwiz" id="estimate" name="contact" method="POST" data-netlify="true" netlify-honeypot="_honey" action="/thanks.html">
+      <input type="hidden" name="form-name" value="contact">
       <input type="text" name="_honey" class="qhoney" tabindex="-1" autocomplete="off">
       <input type="hidden" name="Job type" class="qf-job">
       <input type="hidden" name="How much" class="qf-size">
