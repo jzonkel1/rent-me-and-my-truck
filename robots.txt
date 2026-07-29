@@ -18,4 +18,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://jzonkel1.github.io/rent-me-and-my-truck/sitemap.xml
+Sitemap: https://rentmeandmytruck.com/sitemap.xml

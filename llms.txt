@@ -37,13 +37,13 @@ Corpus Christi, Portland, Ingleside, Aransas Pass, Robstown, Calallen, Flour Blu
 
 ## Key pages
 
-- Home: https://jzonkel1.github.io/rent-me-and-my-truck/
-- All services: https://jzonkel1.github.io/rent-me-and-my-truck/services/
-- Junk removal: https://jzonkel1.github.io/rent-me-and-my-truck/services/junk-removal.html
-- Estate cleanouts: https://jzonkel1.github.io/rent-me-and-my-truck/services/estate-cleanouts.html
-- Service areas: https://jzonkel1.github.io/rent-me-and-my-truck/service-areas/
-- Reviews: https://jzonkel1.github.io/rent-me-and-my-truck/reviews.html
-- Contact & free estimate: https://jzonkel1.github.io/rent-me-and-my-truck/contact.html
+- Home: https://rentmeandmytruck.com/
+- All services: https://rentmeandmytruck.com/services/
+- Junk removal: https://rentmeandmytruck.com/services/junk-removal.html
+- Estate cleanouts: https://rentmeandmytruck.com/services/estate-cleanouts.html
+- Service areas: https://rentmeandmytruck.com/service-areas/
+- Reviews: https://rentmeandmytruck.com/reviews.html
+- Contact & free estimate: https://rentmeandmytruck.com/contact.html
 
 ## Contact
 
