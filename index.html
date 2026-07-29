@@ -81,7 +81,8 @@ nav a:hover{color:var(--gold-hi)}
   letter-spacing:0;text-transform:none;padding:8px 12px;border-radius:8px;white-space:nowrap;
   transition:background .12s,color .12s}
 .menu a:hover{background:var(--panel);color:var(--gold-hi)}
-.mega{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:min(660px,calc(100vw - 32px));gap:3px 20px}
+.mega{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:min(740px,calc(100vw - 32px));gap:3px 20px}
+.mega a{white-space:normal}/* let long service names wrap instead of overflowing into the next column */
 .mega .mcol{display:flex;flex-direction:column;min-width:0}
 .mega .mh{font-family:'Alfa Slab One',Rockwell,Georgia,serif;text-transform:uppercase;font-size:11px;
   letter-spacing:.08em;color:var(--gold);padding:2px 12px 9px;margin-bottom:5px;border-bottom:1px solid var(--line)}
