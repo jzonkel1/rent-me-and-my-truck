@@ -97,8 +97,10 @@ nav a:hover{color:var(--gold-hi)}
 .hero{position:relative;min-height:min(84vh,720px);display:flex;align-items:center;
   padding:96px 0 92px;overflow:hidden}
 .hero-bg{position:absolute;inset:0}
+.hero-bg picture{display:block;position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;
   filter:saturate(1.04) contrast(1.02)}
+@media(max-width:700px){.hero-bg img{object-position:center 42%}}
 /* centred hero: vignette + vertical scrim so type reads over the middle */
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:
@@ -123,7 +125,9 @@ nav a:hover{color:var(--gold-hi)}
              inset 0 7px 0 var(--gold),inset 0 -7px 0 var(--gold),
              inset 0 8px 0 rgba(23,20,15,.22),inset 0 -8px 0 rgba(23,20,15,.22)}
 .band p{margin:0;text-align:center;font-family:'Alfa Slab One',Rockwell,Georgia,serif;text-transform:uppercase;
-  font-size:clamp(0.98rem,3.2vw,1.7rem);letter-spacing:.02em;overflow-wrap:break-word}
+  font-size:clamp(0.98rem,3.2vw,1.7rem);letter-spacing:.02em;text-wrap:balance}
+/* keep each clause intact so the line only ever breaks at the em-dash (clean 2-line split on phones) */
+.band p span{white-space:nowrap}
 .band p::before{content:"★";margin-right:.9em;opacity:.55;font-size:.8em;vertical-align:8%}
 .band p::after{content:"★";margin-left:.9em;opacity:.55;font-size:.8em;vertical-align:8%}
 
@@ -548,7 +552,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
 <div id="top"></div>
 <section class="hero">
   <div class="hero-bg">
-    <img src="img/hero.jpg" alt="Rent Me and My Truck's dually and dump trailer in Corpus Christi at sunrise" fetchpriority="high">
+    <picture>
+      <!-- mobile: the wide sunrise shot center-crops to empty pavement on phones, so serve a portrait shot (Eddie on the job) -->
+      <source media="(max-width:700px)" srcset="img/hero-mobile.jpg" width="640" height="1103">
+      <img src="img/hero.jpg" alt="Rent Me and My Truck — Corpus Christi junk removal, hauling &amp; cleanouts" fetchpriority="high" width="2000" height="721">
+    </picture>
   </div>
   <div class="wrap">
     <div class="hero-in">
@@ -582,7 +590,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
   </div>
 </section>
 
-<div class="band"><p>We haul it all — so you don't have to.</p></div>
+<div class="band"><p><span>We haul it all —</span> <span>so you don't have to.</span></p></div>
 
 <!-- ============ ONE TRIP ============ -->
 <section class="onetrip">
