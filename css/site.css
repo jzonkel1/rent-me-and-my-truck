@@ -466,11 +466,11 @@ h1,h2,h3{letter-spacing:.004em;text-wrap:balance;overflow-wrap:break-word}
 .navitem.has-menu:hover .dropdown,.navitem.has-menu:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
 .menu{background:var(--ink-2);border:1px solid var(--line);border-radius:13px;
   box-shadow:0 26px 52px rgba(0,0,0,.55);padding:18px}
-.menu a{display:block;text-decoration:none;color:#CFC4B4;font-weight:600;font-size:13px;
+.menu a{display:block;text-decoration:none;color:#CFC4B4;font-weight:600;font-size:14px;
   letter-spacing:0;text-transform:none;padding:8px 12px;border-radius:8px;white-space:nowrap;
   transition:background .12s,color .12s}
 .menu a:hover{background:var(--panel);color:var(--gold-hi)}
-.mega{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:min(740px,calc(100vw - 32px));gap:3px 20px}
+.mega{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:min(780px,calc(100vw - 32px));gap:3px 20px}
 .mega a{white-space:normal}/* let long service names wrap instead of overflowing into the next column */
 .mega .mcol{display:flex;flex-direction:column;min-width:0}
 .mega .mh{font-family:'Alfa Slab One',Rockwell,Georgia,serif;text-transform:uppercase;font-size:11px;
