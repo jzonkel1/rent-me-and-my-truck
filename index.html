@@ -101,7 +101,17 @@ nav a:hover{color:var(--gold-hi)}
 .hero-bg picture{display:block;position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;
   filter:saturate(1.04) contrast(1.02)}
-@media(max-width:700px){.hero-bg img{object-position:center 42%}}
+/* mobile: stack — full photo as a banner up top, copy on the dark panel below
+   (the wide shot would cover-crop to a sliver of trailer if kept as a background) */
+@media(max-width:700px){
+  .hero{display:block;min-height:0;padding:0}
+  .hero-bg,.hero-bg picture{position:static}
+  .hero-bg img{display:block;width:100%;height:auto}
+  .hero-bg::after{content:none}
+  .hero .wrap{padding-top:26px;padding-bottom:44px}
+  .hero p.lead{margin:14px auto 24px}
+  .chips{margin-top:26px;padding-top:20px}
+}
 /* centred hero: vignette + vertical scrim so type reads over the middle */
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:
@@ -491,7 +501,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
 .callbar .c2{background:var(--panel);color:var(--text)}
 .callbar svg{width:17px;height:17px;stroke:currentColor;stroke-width:2.2;fill:none;
   stroke-linecap:round;stroke-linejoin:round}
-@media(max-width:760px){.callbar{display:flex}body{padding-bottom:56px}}
+@media(max-width:760px){
+  .callbar{display:flex;transform:translateY(102%);transition:transform .28s ease}
+  .callbar.show{transform:translateY(0)}
+  body{padding-bottom:56px}
+}
 
 /* ===== bright brand social badges (added) ===== */
 .socials{display:flex;gap:11px;margin-top:20px}
@@ -587,9 +601,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
 <section class="hero">
   <div class="hero-bg">
     <picture>
-      <!-- mobile: the wide sunrise shot center-crops to empty pavement on phones, so serve a portrait shot (Eddie on the job) -->
-      <source media="(max-width:700px)" srcset="img/hero-mobile.jpg" width="640" height="1103">
-      <img src="img/hero.jpg" alt="Rent Me and My Truck — Corpus Christi junk removal, hauling &amp; cleanouts" fetchpriority="high" width="2000" height="721">
+      <!-- mobile: tighter crop of the same shot (empty road + neighboring RVs trimmed) shown as a banner above the copy -->
+      <source media="(max-width:700px)" srcset="img/hero-mobile.jpg" width="1290" height="739">
+      <img src="img/hero.jpg" alt="Rent Me and My Truck — Corpus Christi junk removal, hauling &amp; cleanouts" fetchpriority="high" width="1600" height="739">
     </picture>
   </div>
   <div class="wrap">
@@ -1122,6 +1136,16 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
   open.addEventListener('click', function () { set(true); });
   closers.forEach(function (c) { c.addEventListener('click', function () { set(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+
+/* mobile call bar: slide in only once the hero has scrolled out of view */
+(function () {
+  var bar = document.querySelector('.callbar'), hero = document.querySelector('.hero');
+  if (!bar) return;
+  if (!hero || !('IntersectionObserver' in window)) { bar.classList.add('show'); return; }
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('show', !entries[0].isIntersecting);
+  }).observe(hero);
 })();
 </script>
 
