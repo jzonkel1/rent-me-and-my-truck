@@ -533,7 +533,7 @@ h1,h2,h3{letter-spacing:.004em;text-wrap:balance;overflow-wrap:break-word}
 .ba-cap b{color:var(--gold-hi)}
 
 /* ---------- quote wizard ---------- */
-.qwiz{padding:30px}
+.qwiz{padding:30px;min-width:0}
 .qhoney{display:none}
 .qwiz-head{margin-bottom:24px}
 .qwiz-prog{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
@@ -572,6 +572,12 @@ h1,h2,h3{letter-spacing:.004em;text-wrap:balance;overflow-wrap:break-word}
 .qwiz .qnav .btn{width:auto;margin-top:0}
 .qnav .qback{flex:0 0 auto}
 .qnav .qnext,.qnav .qsubmit{flex:1}
+/* mobile: the nowrap submit label made the qnav row (and the grid-item form) wider than the screen — stack the buttons instead */
+@media(max-width:700px){
+  .qwiz{padding:26px 20px}
+  .qnav{flex-direction:column-reverse}
+  .qwiz .qnav .btn{width:100%}
+}
 .qfoot{margin:16px 0 0;text-align:center;font-size:13.5px;color:var(--muted);line-height:1.55}
 .qfoot a{color:var(--gold-hi);font-weight:700;text-decoration:none}
 
