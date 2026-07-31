@@ -101,14 +101,11 @@ nav a:hover{color:var(--gold-hi)}
 .hero-bg picture{display:block;position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;
   filter:saturate(1.04) contrast(1.02)}
-/* mobile: stack — full photo as a banner up top, copy on the dark panel below
-   (the wide shot would cover-crop to a sliver of trailer if kept as a background) */
+/* mobile: full-bleed cover hero, but compact — height comes from the content
+   (not 84vh) so the CTAs sit inside the first screen */
 @media(max-width:700px){
-  .hero{display:block;min-height:0;padding:0}
-  .hero-bg,.hero-bg picture{position:static}
-  .hero-bg img{display:block;width:100%;height:auto}
-  .hero-bg::after{content:none}
-  .hero .wrap{padding-top:26px;padding-bottom:44px}
+  .hero{min-height:0;padding:40px 0 50px}
+  .hero-bg img{object-position:62% 50%}
   .hero p.lead{margin:14px auto 24px}
   .chips{margin-top:26px;padding-top:20px}
 }
@@ -533,6 +530,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
 .hero-follow .hf-icons a:hover{transform:translateY(-2px);filter:brightness(1.08)}
 .hero-follow .hf-icons svg{width:25px;height:25px;display:block}
 @media(max-width:520px){.hero-follow{justify-content:center;width:100%}}
+/* mobile: hero social buttons at 2x */
+@media(max-width:700px){
+  .hero-follow .hf-icons{gap:14px}
+  .hero-follow .hf-icons a{width:76px;height:76px;border-radius:20px}
+  .hero-follow .hf-icons svg{width:50px;height:50px}
+}
 </style>
 <link rel="canonical" href="https://rentmeandmytruck.com/">
 <meta property="og:type" content="website">
