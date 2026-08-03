@@ -31,7 +31,7 @@ Junk removal, hauling, delivery, and cleanouts in Corpus Christi, TX and the gre
 
 ## Service area
 
-Corpus Christi, Portland, Ingleside, Aransas Pass, Robstown, Calallen, Flour Bluff, Padre Island, Rockport, Odem, Sinton, and Mathis, TX.
+Corpus Christi, Portland, Ingleside, Aransas Pass, Robstown, Calallen, Flour Bluff, Padre Island, Rockport, Odem, Sinton, Mathis, Orange Grove, and Alice, TX.
 
 ## Get a quote
 

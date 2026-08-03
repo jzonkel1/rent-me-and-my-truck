@@ -325,6 +325,18 @@ nav.mainnav a:hover,nav.mainnav a.active{color:var(--gold-hi)}
 .towns a,.towns span{border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px;
   font-weight:600;color:#CFC4B4;background:var(--panel);text-decoration:none;transition:border-color .15s,color .15s}
 .towns a:hover{border-color:var(--gold);color:var(--gold-hi)}
+/* tight, centred pill block — keeps a long town list reading as one group
+   instead of stretching the full container width with a ragged last row */
+.towns.tight{justify-content:center;gap:8px;max-width:760px;margin-left:auto;margin-right:auto}
+
+/* ---------- community / in the neighborhood ---------- */
+.comm{display:grid;gap:18px;margin-top:34px}
+@media(min-width:820px){.comm{grid-template-columns:1fr 1fr}}
+.comm figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
+.comm img{width:100%;height:auto;display:block}
+.comm figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 13px;
+  font-size:13.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:#F0E7D8;background:linear-gradient(transparent,rgba(8,7,6,.9))}
 
 /* ---------- contact ---------- */
 .ct-wrap{background:var(--ink-2)}
@@ -410,10 +422,12 @@ h1,h2,h3{letter-spacing:.004em;text-wrap:balance;overflow-wrap:break-word}
 .qcard .tel{font-size:1.4rem}
 
 /* --- city medallion area-hub cards (no stand-in photos) --- */
-.areagrid{display:grid;gap:20px}
-@media(min-width:560px){.areagrid{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.areagrid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1120px){.areagrid{grid-template-columns:repeat(4,1fr)}}
+/* flex (not grid) so an incomplete final row centres instead of stranding cards hard-left */
+.areagrid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.areagrid>.areacard{flex:0 1 100%}
+@media(min-width:560px){.areagrid>.areacard{flex-basis:calc((100% - 20px)/2)}}
+@media(min-width:900px){.areagrid>.areacard{flex-basis:calc((100% - 40px)/3)}}
+@media(min-width:1120px){.areagrid>.areacard{flex-basis:calc((100% - 60px)/4)}}
 .areacard{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
   padding:30px 24px 26px;text-align:center;text-decoration:none;color:inherit;overflow:hidden;
   display:flex;flex-direction:column;align-items:center;transition:border-color .18s,transform .18s}
