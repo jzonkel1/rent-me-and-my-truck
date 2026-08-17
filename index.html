@@ -249,6 +249,23 @@ nav a:hover{color:var(--gold-hi)}
 .vidfeat .fbfeat{width:min(500px,100%);border-radius:14px;overflow:hidden;background:#000;
   box-shadow:0 18px 44px rgba(0,0,0,.5);line-height:0}
 .vidfeat .fbfeat iframe{width:100%;aspect-ratio:431/476;height:auto;border:0;display:block}
+
+/* ---------- community strip (sits under "Straight From Eddie", same panel,
+              separated by a hairline instead of a background flip) ---------- */
+.comm-wrap{background:var(--ink-2);border-top:1px solid var(--line)}
+.commstrip{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.commstrip{grid-template-columns:1.05fr .95fr;gap:46px}}
+.commstrip figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  position:relative;box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.commstrip img{width:100%;height:auto;display:block}
+.commstrip figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 13px;
+  font-size:13.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:#F0E7D8;background:linear-gradient(transparent,rgba(8,7,6,.9))}
+.commcopy h2{font-size:clamp(1.5rem,4.2vw,2.5rem)}
+.commcopy h2 em{font-style:normal;color:var(--gold)}
+.commcopy>p:not(.eyebrow){color:var(--muted);margin:20px 0 0;font-size:1.06rem}
+.commcopy .btn{margin-top:28px}
+.commcred{margin:16px 0 0;font-size:12.5px;color:var(--muted);opacity:.75}
 .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 13px;
   font-size:13.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
   color:#F0E7D8;background:linear-gradient(transparent,rgba(8,7,6,.9))}
@@ -450,6 +467,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
 @media(max-width:760px){
   .ot-copy{text-align:center}
   .ot-copy .wins{display:inline-grid;text-align:left}
+  .commcopy{text-align:center}
   .area>div:first-child,.ct>div:first-child{text-align:center}
   .area .towns{justify-content:center}
   .ct .info{max-width:360px;margin-left:auto;margin-right:auto}
@@ -833,6 +851,25 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--ink
     <div class="vidfeat">
       <div class="fbfeat"><iframe title="Meet Eddie" loading="lazy" src="https://www.facebook.com/plugins/video.php?height=552&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1349848837104745%2F&show_text=false&width=500&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
       <div class="fbfeat"><iframe title="Eddie on the job" loading="lazy" src="https://www.facebook.com/plugins/video.php?height=552&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1675702513656675%2F&show_text=false&width=500&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="comm-wrap">
+  <div class="wrap">
+    <div class="commstrip">
+      <figure>
+        <img src="img/community-backpacks.jpg" width="1600" height="1065" alt="Clear backpacks filled with school supplies loaded into the trunk of a classic Ford Mustang at the Corpus Christi supply drive" loading="lazy">
+        <figcaption>160+ backpacks, packed and handed out</figcaption>
+      </figure>
+      <div class="commcopy">
+        <p class="eyebrow left">In the neighborhood</p>
+        <h2>More Than <em>a Truck</em></h2>
+        <p>In August 2026 a Corpus Christi car meet turned into a back-to-school supply drive, and Eddie was in the middle of it. Local business owners came together with several thousand dollars and the hands to match &mdash; and more than 160 backpacks went home with Coastal Bend families that evening.</p>
+        <a class="btn btn-ghost" href="about.html">More about Eddie</a>
+        <p class="commcred">Photo by SAR Clicks.</p>
+      </div>
     </div>
   </div>
 </section>

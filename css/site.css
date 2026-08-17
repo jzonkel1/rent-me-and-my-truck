@@ -337,6 +337,18 @@ nav.mainnav a:hover,nav.mainnav a.active{color:var(--gold-hi)}
 .comm figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 13px;
   font-size:13.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
   color:#F0E7D8;background:linear-gradient(transparent,rgba(8,7,6,.9))}
+/* several community stories stacked, each with its own photo row */
+.commstory+.commstory{margin-top:56px}
+.commstory>h3{font-size:clamp(1.18rem,3.5vw,1.6rem);color:var(--white)}
+.commstory>h3 em{font-style:normal;color:var(--gold)}
+.commstory>p{color:var(--muted);margin:14px 0 0;max-width:72ch;font-size:1.03rem}
+.commstory .comm{margin-top:22px}
+@media(min-width:820px){.comm.three{grid-template-columns:repeat(3,1fr);gap:16px}}
+.commcred{margin:26px 0 0;font-size:12.5px;color:var(--muted);opacity:.75}
+@media(max-width:760px){
+  .commstory>h3,.commstory>p,.commcred{text-align:center}
+  .commstory>p{margin-left:auto;margin-right:auto}
+}
 
 /* ---------- contact ---------- */
 .ct-wrap{background:var(--ink-2)}
