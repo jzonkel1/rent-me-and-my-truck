@@ -36,6 +36,6 @@ Corpus Christi, Portland, Ingleside, Aransas Pass, Robstown, Calallen, Flour Blu
 ## Get a quote
 
 - **Call or text:** 361-332-0123
-- **Email:** rentmeandmytruck@yahoo.com
+- **Email:** edward@rentmeandmytruck.com
 - **Website:** https://rentmeandmytruck.com/
 - Free, no-obligation estimates. Send a photo for the fastest price.
